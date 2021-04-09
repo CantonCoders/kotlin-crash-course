@@ -2,11 +2,15 @@ class FizzBuzz {
 
     fun go(number: Int): String {
         return when {
-            number % 15 == 0 -> "fizzbuzz"
+            checkForFizzBuzz(number) -> "fizzbuzz"
             checkForFizz(number) -> "fizz"
             checkForBuzz(number) -> "buzz"
             else ->  "${number}"
         }
+    }
+
+    private fun checkForFizzBuzz(number: Int): Boolean {
+        return checkForFizz(number) && checkForBuzz(number)
     }
 
     private fun checkForBuzz(number: Int): Boolean {

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FizzBuzzTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-04-09T00:53:17" hostname="DUNGEON-DEV" time="0.027">
+<testsuite name="FizzBuzzTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-04-09T01:00:59" hostname="DUNGEON-DEV" time="0.028">
   <properties/>
   <testcase name="Input of 90 should return &quot;fizzbuzz&quot;()" classname="FizzBuzzTest" time="0.022"/>
-  <testcase name="Input of 97 should return &quot;97&quot;()" classname="FizzBuzzTest" time="0.0"/>
-  <testcase name="Input of 100 should return &quot;buzz&quot;()" classname="FizzBuzzTest" time="0.001"/>
-  <testcase name="Input of 1 should return &quot;1&quot;()" classname="FizzBuzzTest" time="0.001"/>
+  <testcase name="Input of 97 should return &quot;97&quot;()" classname="FizzBuzzTest" time="0.001"/>
+  <testcase name="Input of 100 should return &quot;buzz&quot;()" classname="FizzBuzzTest" time="0.0"/>
+  <testcase name="Input of 1 should return &quot;1&quot;()" classname="FizzBuzzTest" time="0.0"/>
   <testcase name="Input of 15 should return &quot;fizzbuzz&quot;()" classname="FizzBuzzTest" time="0.001"/>
-  <testcase name="Input of 3 should return &quot;fizz&quot;()" classname="FizzBuzzTest" time="0.0"/>
+  <testcase name="Input of 3 should return &quot;fizz&quot;()" classname="FizzBuzzTest" time="0.001"/>
   <testcase name="Input of 5 should return &quot;buzz&quot;()" classname="FizzBuzzTest" time="0.001"/>
   <testcase name="Input of 99 should return &quot;fizz&quot;()" classname="FizzBuzzTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

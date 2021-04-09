@@ -5,15 +5,16 @@ import kotlin.test.assertEquals
 class FizzBuzzTest {
 
     @Test
-    fun sampleTest() {
+    fun `Input of 1 should return "1"`() {
         val fizzBuzz = FizzBuzz()
         val result = fizzBuzz.go(1)
         assertEquals("1", result)
     }
 
     @Test
-    fun `should be divisable by three`() {
+    fun `Input of 3 should return "fizz"`() {
         val fizzBuzz = FizzBuzz()
-        
+        val result = fizzBuzz.go(3)
+        assertEquals("fizz", result)
     }
 }

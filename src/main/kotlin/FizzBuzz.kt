@@ -4,9 +4,13 @@ class FizzBuzz {
         return when {
             number % 15 == 0 -> "fizzbuzz"
             checkForFizz(number) -> "fizz"
-            number % 5 == 0 -> "buzz"
+            checkForBuzz(number) -> "buzz"
             else ->  "${number}"
         }
+    }
+
+    private fun checkForBuzz(number: Int): Boolean {
+        return number % 5 == 0 || "${number}".contains("5")
     }
 
     private fun checkForFizz(number: Int): Boolean {

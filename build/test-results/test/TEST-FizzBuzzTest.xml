@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FizzBuzzTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-04-09T00:27:49" hostname="DUNGEON-DEV" time="0.023">
+<testsuite name="FizzBuzzTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-04-09T00:37:52" hostname="DUNGEON-DEV" time="0.025">
   <properties/>
-  <testcase name="Input of 1 should return &quot;1&quot;()" classname="FizzBuzzTest" time="0.022"/>
-  <testcase name="Input of 3 should return 'fizz'()" classname="FizzBuzzTest" time="0.0"/>
+  <testcase name="Input of 1 should return &quot;1&quot;()" classname="FizzBuzzTest" time="0.023"/>
+  <testcase name="Input of 3 should return &quot;fizz&quot;()" classname="FizzBuzzTest" time="0.001"/>
+  <testcase name="Input of 5 should return &quot;buzz&quot;()" classname="FizzBuzzTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,11 +1,14 @@
 class FizzBuzz {
 
     fun go(number: Int): String {
-        if (number == 15) return "fizzbuzz"
-        if (number % 3 == 0) return "fizz"
-        if (number % 5 == 0) return "buzz"
+        var result = ""
 
-        return "${number}"
+        if (number % 3 == 0) result += "fizz"
+        if (number % 5 == 0) result += "buzz"
+
+        if (result == "") return "${number}"
+
+        return result
     }
 
 }

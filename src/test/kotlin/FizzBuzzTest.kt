@@ -25,4 +25,10 @@ class FizzBuzzTest {
         val result = fizzBuzz.go(5)
         assertEquals("buzz", result)
     }
+
+    @Test
+    fun `Input of 15 should return "fizzbuzz"`() {
+        val result = fizzBuzz.go(15)
+        assertEquals("fizzbuzz", result)
+    }
 }

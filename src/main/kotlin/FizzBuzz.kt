@@ -5,7 +5,7 @@ class FizzBuzz {
             checkForFizzBuzz(number) -> "fizzbuzz"
             checkForFizz(number) -> "fizz"
             checkForBuzz(number) -> "buzz"
-            else ->  "${number}"
+            else ->  "$number"
         }
     }
 
@@ -14,11 +14,11 @@ class FizzBuzz {
     }
 
     private fun checkForBuzz(number: Int): Boolean {
-        return number % 5 == 0 || "${number}".contains("5")
+        return number % 5 == 0 || "$number".contains("5")
     }
 
     private fun checkForFizz(number: Int): Boolean {
-        return number % 3 == 0 || "${number}".contains("3")
+        return number % 3 == 0 || "$number".contains("3")
     }
 
 }

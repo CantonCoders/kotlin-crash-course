@@ -57,7 +57,7 @@ class FizzBuzzTest {
     }
 
     @Test
-    fun `Input of 31 should return "fizz"`() {
+    fun `String containing the digit 3 should return "fizz"`() {
         val result = fizzBuzz.go(31)
         assertEquals("fizz", result)
     }

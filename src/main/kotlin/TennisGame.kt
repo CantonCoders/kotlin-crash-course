@@ -6,20 +6,21 @@ class TennisGame {
     private var playerOnePoints: Int = 0
 
     fun callScore(): String {
-        if (scoreIsTied()) return buildTiedScore()
-        if (isAdvantage()) return buildAdvantageScore()
-        if (gameIsWinnable()) return winningScore()
-
-        return buildScore()
+        return when {
+            scoreIsTied() -> reportTiedScore()
+            eitherPlayerHasAdvantage() -> reportAdvantage()
+            gameOver() -> reportGameOver()
+            else -> reportScore()
+        }
     }
 
-    private fun buildAdvantageScore() = "Advantage ${winningPlayerName()}"
+    private fun reportAdvantage() = "Advantage ${winningPlayerName()}"
 
-    private fun buildScore(): String {
+    private fun reportScore(): String {
         return "${score(playerOnePoints)}, ${score(playerTwoPoints)}"
     }
 
-    private fun winningScore(): String {
+    private fun reportGameOver(): String {
         return "Game ${winningPlayerName()}"
     }
 
@@ -27,11 +28,11 @@ class TennisGame {
         return if (playerOnePoints > playerTwoPoints) "Player 1" else "Player 2"
     }
 
-    private fun gameIsWinnable() = (playerOnePoints > 3 || playerTwoPoints > 3)
+    private fun gameOver() = (playerOnePoints > 3 || playerTwoPoints > 3)
 
-    private fun isAdvantage() = (playerOnePoints >= 3 && playerTwoPoints >= 3) && abs(playerOnePoints - playerTwoPoints) == 1
+    private fun eitherPlayerHasAdvantage() = (playerOnePoints >= 3 && playerTwoPoints >= 3) && abs(playerOnePoints - playerTwoPoints) == 1
 
-    private fun buildTiedScore(): String {
+    private fun reportTiedScore(): String {
         if (threePointsScored()) return "Deuce"
         return "${score(playerOnePoints)} All"
     }

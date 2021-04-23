@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TennisTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-04-23T00:36:56" hostname="DUNGEON-DEV" time="0.027">
+<testsuite name="TennisTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-04-23T00:46:09" hostname="DUNGEON-DEV" time="0.032">
   <properties/>
-  <testcase name="Player One has Advantage()" classname="TennisTest" time="0.02"/>
-  <testcase name="Player Two has Advantage()" classname="TennisTest" time="0.0"/>
+  <testcase name="Player One has Advantage()" classname="TennisTest" time="0.023"/>
+  <testcase name="Player Two has Advantage()" classname="TennisTest" time="0.001"/>
   <testcase name="Player 1 scores third point giving Forty, Love()" classname="TennisTest" time="0.001"/>
-  <testcase name="Players tied at Deuce()" classname="TennisTest" time="0.0"/>
+  <testcase name="Players tied at Deuce()" classname="TennisTest" time="0.001"/>
   <testcase name="Players tied at Fifteen All()" classname="TennisTest" time="0.0"/>
   <testcase name="Player Two Wins off Advantage()" classname="TennisTest" time="0.0"/>
   <testcase name="Game starts at Love All()" classname="TennisTest" time="0.0"/>
   <testcase name="Player 1 scores first point giving Fifteen, Love()" classname="TennisTest" time="0.0"/>
   <testcase name="Player two beats the pants off Joel()" classname="TennisTest" time="0.0"/>
   <testcase name="Player 2 scores first point give Love, Fifteen()" classname="TennisTest" time="0.0"/>
-  <testcase name="Player One Deuce off Advantage()" classname="TennisTest" time="0.001"/>
-  <testcase name="Player 1 scores winning point giving Game All Win()" classname="TennisTest" time="0.001"/>
+  <testcase name="Player One Deuce off Advantage()" classname="TennisTest" time="0.0"/>
+  <testcase name="Player 1 scores winning point giving Game All Win()" classname="TennisTest" time="0.0"/>
   <testcase name="Player 1 scores second point giving Thirty, Love()" classname="TennisTest" time="0.0"/>
   <testcase name="Player 2 scores second point give Love, Thirty()" classname="TennisTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

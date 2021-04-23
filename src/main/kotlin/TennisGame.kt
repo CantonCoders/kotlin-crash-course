@@ -6,9 +6,9 @@ class TennisGame {
     private var playerOnePoints: Int = 0
 
     fun callScore(): String {
+        if (scoreIsTied()) return buildTiedScore()
         if (isAdvantage()) return buildAdvantageScore()
         if (gameIsWinnable()) return winningScore()
-        if (scoreIsTied()) return buildTiedScore()
 
         return buildScore()
     }
@@ -36,7 +36,7 @@ class TennisGame {
         return "${score(playerOnePoints)} All"
     }
 
-    private fun threePointsScored() = playerOnePoints == 3
+    private fun threePointsScored() = playerOnePoints >= 3
 
     private fun scoreIsTied() = playerOnePoints == playerTwoPoints
 

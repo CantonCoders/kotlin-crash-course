@@ -1,5 +1,3 @@
-import org.junit.jupiter.api.BeforeAll
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
@@ -7,21 +5,16 @@ class TennisTest {
 
     private var game: TennisGame = TennisGame()
 
-//    @BeforeEach
-//    fun beforeAll() {
-//        game = TennisGame()
-//    }
-
     @Test
     fun `Game starts at Love All`() {
-        var score = game.callScore()
+        val score = game.callScore()
         assertEquals("Love All", score)
     }
 
     @Test
     fun `Player 1 scores first point giving Fifteen, Love`() {
         game.playerOneScoresPoint()
-        var score = game.callScore()
+        val score = game.callScore()
         assertEquals("Fifteen, Love", score)
     }
 
@@ -29,7 +22,7 @@ class TennisTest {
     fun `Player 1 scores second point giving Thirty, Love`() {
         game.playerOneScoresPoint()
         game.playerOneScoresPoint()
-        var score = game.callScore()
+        val score = game.callScore()
         assertEquals("Thirty, Love", score)
     }
 
@@ -38,7 +31,7 @@ class TennisTest {
         game.playerOneScoresPoint()
         game.playerOneScoresPoint()
         game.playerOneScoresPoint()
-        var score = game.callScore()
+        val score = game.callScore()
         assertEquals("Forty, Love", score)
     }
 
@@ -127,5 +120,39 @@ class TennisTest {
         game.playerTwoScoresPoint()
 
         assertEquals("Advantage Player 2", game.callScore())
+    }
+
+    @Test
+    fun `Player Two Wins off Advantage`() {
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        game.playerTwoScoresPoint()
+        game.playerTwoScoresPoint()
+
+        assertEquals("Game Player 2", game.callScore())
+    }
+
+    @Test
+    fun `Player One Deuce off Advantage`() {
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        assertEquals("Deuce", game.callScore())
     }
 }

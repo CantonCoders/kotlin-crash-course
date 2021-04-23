@@ -97,6 +97,7 @@ class TennisTest {
         assertEquals("Game Player 2", game.callScore())
     }
 
+    @Test
     fun `Player One has Advantage`() {
         game.playerOneScoresPoint()
         game.playerTwoScoresPoint()
@@ -110,5 +111,21 @@ class TennisTest {
         game.playerOneScoresPoint()
 
         assertEquals("Advantage Player 1", game.callScore())
+    }
+
+    @Test
+    fun `Player Two has Advantage`() {
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        game.playerOneScoresPoint()
+        game.playerTwoScoresPoint()
+
+        game.playerTwoScoresPoint()
+
+        assertEquals("Advantage Player 2", game.callScore())
     }
 }

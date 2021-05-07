@@ -52,4 +52,23 @@ class BowlingTest {
 
         assertEquals("7/", score)
     }
+
+    @Test
+    fun `Score the first frame`() {
+        bowlingGame.pinsKnockedDown(1)
+        bowlingGame.pinsKnockedDown(3)
+
+        assertEquals("4", bowlingGame.getFrame(0).getScore())
+    }
+
+    @Test
+    fun `Score the second frame`() {
+        bowlingGame.pinsKnockedDown(1)
+        bowlingGame.pinsKnockedDown(3)
+        bowlingGame.pinsKnockedDown(1)
+        bowlingGame.pinsKnockedDown(2)
+
+        assertEquals("3", bowlingGame.getFrame(1).getScore())
+
+    }
 }

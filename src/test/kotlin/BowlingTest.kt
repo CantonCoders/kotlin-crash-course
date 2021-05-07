@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestTemplate
 import kotlin.test.assertEquals
 
 class BowlingTest {
@@ -68,7 +69,18 @@ class BowlingTest {
         bowlingGame.pinsKnockedDown(1)
         bowlingGame.pinsKnockedDown(2)
 
-        assertEquals("3", bowlingGame.getFrame(1).getScore())
+        assertEquals("7", bowlingGame.getFrame(1).getScore())
 
+    }
+
+    @Test
+    fun `Score a strike frame`() {
+        bowlingGame.pinsKnockedDown(1)
+        bowlingGame.pinsKnockedDown(3)  // 4
+        bowlingGame.pinsKnockedDown(10) // 4 + 10 + 7 = 21
+        bowlingGame.pinsKnockedDown(2)
+        bowlingGame.pinsKnockedDown(5) //  4 + 10 + 7 + 7 = 28
+
+        assertEquals("21", bowlingGame.getFrame(1).getScore())
     }
 }
